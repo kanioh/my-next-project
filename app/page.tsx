@@ -3,8 +3,8 @@ import styles from "./page.module.css";
 
 import ButtonLink from "@/app/_components/ButtonLink";
 import NewsList from "@/app/_components/NewsList";
+import { TOP_NEWS_LIMIT } from "@/app/_constants";
 import { getNewsList } from "@/app/_libs/microcms";
-import { TOP_NEWS_LIMIT } from "./_constants";
 
 export default async function Home() {
     // 表示件数を2件に絞る

@@ -1,3 +1,4 @@
+import { formatDate } from "@/app/_libs/utils";
 import Image from "next/image";
 import styles from "./index.module.css";
 
@@ -8,14 +9,8 @@ type Props = {
 export default function Date({ date }: Props) {
     return (
         <span className={styles.date}>
-            <Image
-                src="/clock.svg"
-                alt=""
-                width={16}
-                height={16}
-                loading="eager"
-            />
-            {date}
+            <Image src="/clock.svg" alt="" width={16} height={16} loading="eager" />
+            {formatDate(date)}
         </span>
     );
 }
