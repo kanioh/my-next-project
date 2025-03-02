@@ -6,6 +6,8 @@ import NewsList from "@/app/_components/NewsList";
 import { TOP_NEWS_LIMIT } from "@/app/_constants";
 import { getNewsList } from "@/app/_libs/microcms";
 
+export const revalidate = 60;
+
 export default async function Home() {
     // 表示件数を2件に絞る
     const data = await getNewsList({

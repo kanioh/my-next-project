@@ -4,8 +4,6 @@ import SearchField from "@/app/_components/SearchField";
 import { NEWS_LIST_LIMIT } from "@/app/_constants";
 import { getNewsList } from "@/app/_libs/microcms";
 
-// キャッシュの保持時間
-export const revalidate = 60;
 
 export default async function Page() {
     const { contents: news, totalCount } = await getNewsList({
